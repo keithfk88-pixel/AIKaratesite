@@ -1,0 +1,50 @@
+[
+  {
+    "id": "KKA-2026-1001",
+    "name": "Haruto Takahashi",
+    "age": 15,
+    "sex": "Male",
+    "dateOfBirth": "2011-04-12",
+    "placeOfBirth": "Kyoto, Japan",
+    "address": "18 Jalan Putra Harmoni 1/3B, Putra Heights, 47650 Subang Jaya, Selangor",
+    "program": "Junior & Teen Cadets (Ages 13\u201317)",
+    "rank": "10th Kyu \u00b7 White Belt",
+    "registeredAt": "2026-10-12T09:15:00.000Z"
+  },
+  {
+    "id": "KKA-2026-1002",
+    "name": "Nurul Aina binti Kamal",
+    "age": 10,
+    "sex": "Female",
+    "dateOfBirth": "2016-07-08",
+    "placeOfBirth": "Shah Alam, Selangor",
+    "address": "42 Persiaran Putra Bahagia, Putra Heights, 47650 Subang Jaya, Selangor",
+    "program": "Youth Foundation (Ages 5\u201312)",
+    "rank": "10th Kyu \u00b7 White Belt",
+    "registeredAt": "2026-10-15T14:30:00.000Z"
+  },
+  {
+    "id": "KKA-2026-1003",
+    "name": "Daniel Wong Kai Jun",
+    "age": 25,
+    "sex": "Male",
+    "dateOfBirth": "2001-02-24",
+    "placeOfBirth": "Kuala Lumpur, Malaysia",
+    "address": "Unit B-14-05, Residensi Harmoni, USJ 21, 47630 Subang Jaya, Selangor",
+    "program": "Adult Traditional Karate (Ages 18+)",
+    "rank": "10th Kyu \u00b7 White Belt",
+    "registeredAt": "2026-10-18T18:05:00.000Z"
+  },
+  {
+    "id": "KKA-2026-1004",
+    "name": "Siti Sarah binti Zulkifli",
+    "age": 12,
+    "sex": "Female",
+    "dateOfBirth": "2014-08-19",
+    "placeOfBirth": "Putra Heights, Selangor",
+    "address": "No. 28, Jalan Putra Bistari 2/1, Putra Heights, 47650 Subang Jaya, Selangor",
+    "program": "Youth Foundation (Ages 5\u201312)",
+    "rank": "10th Kyu \u00b7 White Belt",
+    "registeredAt": "2026-10-20T01:36:25.913Z"
+  }
+]

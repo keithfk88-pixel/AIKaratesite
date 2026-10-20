@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #FAF8F5;
+    color: #181615;
+  }
+
+  h1, h2, h3, .font-dojo {
+    font-family: 'Playfair Display', 'Noto Serif JP', Georgia, Cambria, serif;
+  }
+}
+
+/* Print stylesheet so printing an admission card prints cleanly on a single page */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-slip,
+  #printable-slip * {
+    visibility: visible;
+  }
+  #printable-slip {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: 2px solid #181615 !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
