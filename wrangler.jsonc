@@ -1,0 +1,8 @@
+﻿{
+  "name": "aikaratesite",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./web",
+    "not_found_handling": "single-page-application"
+  }
+}
