@@ -10,6 +10,8 @@ import {
 } from 'lucide-react';
 import { FalconCrest } from './FalconCrest';
 
+const API = import.meta.env.VITE_API_URL ?? '';
+
 const TODAY_REFERENCE = new Date('2026-10-20T00:00:00');
 
 export function calculateAgeFromDob(dobString) {
@@ -161,7 +163,9 @@ export function RegistrationSection({
     setSubmitting(true);
     try {
       const isEdit = Boolean(editingStudent?.id);
-      const endpoint = isEdit ? `/api/students/${encodeURIComponent(editingStudent.id)}` : '/api/students';
+      const endpoint = isEdit
+        ? `${API}/api/students/${encodeURIComponent(editingStudent.id)}`
+        : `${API}/api/students`;
       const method = isEdit ? 'PUT' : 'POST';
 
       const response = await fetch(endpoint, {

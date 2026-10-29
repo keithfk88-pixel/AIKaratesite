@@ -11,6 +11,8 @@ import {
   UploadCloud,
 } from 'lucide-react';
 
+const API = import.meta.env.VITE_API_URL ?? '';
+
 export function SupabaseStatusModal({
   open,
   statusData,
@@ -50,7 +52,7 @@ export function SupabaseStatusModal({
 
     setBusy(true);
     try {
-      const res = await fetch('/api/supabase/config', {
+      const res = await fetch(`${API}/api/supabase/config`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -79,7 +81,7 @@ export function SupabaseStatusModal({
     setSuccessMsg('');
     setBusy(true);
     try {
-      const res = await fetch('/api/supabase/sync', { method: 'POST' });
+      const res = await fetch(`${API}/api/supabase/sync`, { method: 'POST' });
       const data = await res.json();
       if (!res.ok) {
         setErrorMsg(data.detail || 'Unable to sync records to Supabase.');
@@ -98,7 +100,7 @@ export function SupabaseStatusModal({
     setErrorMsg('');
     setBusy(true);
     try {
-      const res = await fetch('/api/supabase/status');
+      const res = await fetch(`${API}/api/supabase/status`);
       if (res.ok) {
         const data = await res.json();
         onStatusUpdated(data);
@@ -130,7 +132,7 @@ export function SupabaseStatusModal({
 
           <div className="flex items-center gap-2">
             <a
-              href="/docs"
+              href={`${API}/docs`}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-semibold text-white transition-colors"

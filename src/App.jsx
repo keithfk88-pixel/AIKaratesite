@@ -8,6 +8,8 @@ import { StudentSlipModal } from './components/StudentSlipModal';
 import { SupabaseStatusModal } from './components/SupabaseStatusModal';
 import { Footer } from './components/Footer';
 
+const API = import.meta.env.VITE_API_URL ?? '';
+
 export default function App() {
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -22,7 +24,7 @@ export default function App() {
 
   const fetchStudents = useCallback(async () => {
     try {
-      const res = await fetch('/api/students');
+      const res = await fetch(`${API}/api/students`);
       if (res.ok) {
         const data = await res.json();
         setStudents(Array.isArray(data.students) ? data.students : []);
@@ -36,7 +38,7 @@ export default function App() {
 
   const fetchSupabaseStatus = useCallback(async () => {
     try {
-      const res = await fetch('/api/supabase/status');
+      const res = await fetch(`${API}/api/supabase/status`);
       if (res.ok) {
         const data = await res.json();
         setSupabaseStatus(data);
@@ -86,7 +88,7 @@ export default function App() {
 
   const handleDeleteStudent = async (id) => {
     try {
-      const res = await fetch(`/api/students/${encodeURIComponent(id)}`, {
+      const res = await fetch(`${API}/api/students/${encodeURIComponent(id)}`, {
         method: 'DELETE',
       });
       if (res.ok) {
