@@ -32,7 +32,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://aikaratesite.keithfk88.workers.dev"],
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
